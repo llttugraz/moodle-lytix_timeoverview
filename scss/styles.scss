@@ -1,0 +1,67 @@
+@use '../../../scss/colors' as *;
+
+#timeoverview,
+#activity-bar-charts {
+
+    .stacked-bar {
+        min-height: 3em;
+        border-radius: 3px;
+    }
+
+    .chart-label {
+        border-bottom: 4px solid lightgrey;
+    }
+
+    .forum .chart-label {
+        border-bottom-color: $orange;
+    }
+    .navigation .chart-label {
+        border-bottom-color: $violet;
+    }
+    .quiz .chart-label {
+        border-bottom-color: $pink;
+    }
+    .video .chart-label {
+        border-bottom-color: $cyan;
+    }
+    .grade .chart-label {
+        border-bottom-color: $blue;
+    }
+    .resource .chart-label {
+        border-bottom-color: $green;
+    }
+    .submission .chart-label {
+        border-bottom-color: $yellow;
+    }
+    .feedback .chart-label {
+        border-bottom-color: $purpure;
+    }
+
+    .bar {
+        background-color: lightgrey;
+    }
+    .bar.forum {
+        background-color: $orange;
+    }
+    .bar.navigation {
+        background-color: $violet;
+    }
+    .bar.quiz {
+        background-color: $pink;
+    }
+    .bar.video {
+        background-color: $cyan;
+    }
+    .bar.grade {
+        background-color: $blue;
+    }
+    .bar.resource {
+        background-color: $green;
+    }
+    .bar.submission {
+        background-color: $yellow;
+    }
+    .bar.feedback {
+        background-color: $purpure;
+    }
+}

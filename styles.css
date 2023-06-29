@@ -1,0 +1,96 @@
+#timeoverview .stacked-bar,
+#activity-bar-charts .stacked-bar {
+    min-height: 3em;
+    border-radius: 3px;
+}
+
+#timeoverview .chart-label,
+#activity-bar-charts .chart-label {
+    border-bottom: 4px solid lightgrey;
+}
+
+#timeoverview .forum .chart-label,
+#activity-bar-charts .forum .chart-label {
+    border-bottom-color: #f07b41;
+}
+
+#timeoverview .navigation .chart-label,
+#activity-bar-charts .navigation .chart-label {
+    border-bottom-color: #8044bb;
+}
+
+#timeoverview .quiz .chart-label,
+#activity-bar-charts .quiz .chart-label {
+    border-bottom-color: #b740bf;
+}
+
+#timeoverview .video .chart-label,
+#activity-bar-charts .video .chart-label {
+    border-bottom-color: #17a2b8;
+}
+
+#timeoverview .grade .chart-label,
+#activity-bar-charts .grade .chart-label {
+    border-bottom-color: #2e67b8;
+}
+
+#timeoverview .resource .chart-label,
+#activity-bar-charts .resource .chart-label {
+    border-bottom-color: #a3c440;
+}
+
+#timeoverview .submission .chart-label,
+#activity-bar-charts .submission .chart-label {
+    border-bottom-color: #fad305;
+}
+
+#timeoverview .feedback .chart-label,
+#activity-bar-charts .feedback .chart-label {
+    border-bottom-color: #d13370;
+}
+
+#timeoverview .bar,
+#activity-bar-charts .bar {
+    background-color: lightgrey;
+}
+
+#timeoverview .bar.forum,
+#activity-bar-charts .bar.forum {
+    background-color: #f07b41;
+}
+
+#timeoverview .bar.navigation,
+#activity-bar-charts .bar.navigation {
+    background-color: #8044bb;
+}
+
+#timeoverview .bar.quiz,
+#activity-bar-charts .bar.quiz {
+    background-color: #b740bf;
+}
+
+#timeoverview .bar.video,
+#activity-bar-charts .bar.video {
+    background-color: #17a2b8;
+}
+
+#timeoverview .bar.grade,
+#activity-bar-charts .bar.grade {
+    background-color: #2e67b8;
+}
+
+#timeoverview .bar.resource,
+#activity-bar-charts .bar.resource {
+    background-color: #a3c440;
+}
+
+#timeoverview .bar.submission,
+#activity-bar-charts .bar.submission {
+    background-color: #fad305;
+}
+
+#timeoverview .bar.feedback,
+#activity-bar-charts .bar.feedback {
+    background-color: #d13370;
+}
+

@@ -1,0 +1,24 @@
+{
+    "name": "llt-plugindev-lytix/moodle-lytix_timeoverview",
+    "description": "This widget shows how participants spend their time in the course",
+    "keywords": [
+        "moodle",
+        "plugin",
+        "lytix",
+        "participants",
+        "time"
+    ],
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Guenther Moser",
+            "email": "moser@tugraz.at",
+			"role": "developer"
+        }
+    ],
+    "require": {
+        "moodle/moodle": "3.11 - 4.1",
+        "llt-plugindev/moodle-local_lytix": "*",
+        "llt-plugindev-lytix/moodle-lytix_helper": "*"
+    }
+}
