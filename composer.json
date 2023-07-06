@@ -1,5 +1,5 @@
 {
-    "name": "llt-plugindev-lytix/moodle-lytix_timeoverview",
+    "name": "llttugraz/moodle-lytix_timeoverview",
     "description": "This widget shows how participants spend their time in the course",
     "keywords": [
         "moodle",
@@ -18,7 +18,7 @@
     ],
     "require": {
         "moodle/moodle": "3.11 - 4.1",
-        "llt-plugindev/moodle-local_lytix": "*",
-        "llt-plugindev-lytix/moodle-lytix_helper": "*"
+        "llttugraz/moodle-local_lytix": "*",
+        "llttugraz/moodle-lytix_helper": "*"
     }
 }
