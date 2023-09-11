@@ -52,12 +52,10 @@ export const init = (contextid, courseid, containerid) => {
             data = values[1];
 
         const activities = data.Activities;
-
         const view = {
             description: {text: strings.description},
             data: [],
         };
-
         const
             length = activities.length,
             rounder = new PercentRounder();
