@@ -30,5 +30,5 @@ $plugin->maturity     = MATURITY_STABLE;
 $plugin->requires     = 2021051700; // Requires this Moodle version 3.11.
 $plugin->component    = 'lytix_timeoverview'; // Full name of the plugin.
 $plugin->dependencies = ['lytix_helper' => ANY_VERSION];
-$plugin->release      = 'v1.0.5';
+$plugin->release      = 'v1.0.6';
 $plugin->supported    = [401, 401];
