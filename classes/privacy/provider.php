@@ -18,7 +18,8 @@
  * Privacy class for requesting user data.
  *
  * @package    lytix_timeoverview
- * @copyright  2022 Educational Technologies, Graz, University of Technology
+ * @author     Günther Moser <moser@tugraz.at>
+ * @copyright  2023 Educational Technologies, Graz, University of Technology
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
