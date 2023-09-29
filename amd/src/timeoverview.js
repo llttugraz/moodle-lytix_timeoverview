@@ -40,7 +40,6 @@ export const init = (contextid, courseid, containerid) => {
                 'grade',
                 'submission',
                 'feedback',
-                'desc',
             ],
         }
     });
@@ -51,10 +50,7 @@ export const init = (contextid, courseid, containerid) => {
             strings = values[0],
             data = values[1],
             activities = data.Activities,
-            context = {
-                description: {text: strings.desc},
-                data: [],
-            },
+            context = { data: [] },
             length = activities.length,
             rounder = new PercentRounder();
 
