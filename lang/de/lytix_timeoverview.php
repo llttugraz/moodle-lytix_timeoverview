@@ -30,16 +30,16 @@ $string['privacy:metadata'] = 'This plugin does not store any data.';
 // Activity, Time Division.
 $string['overview_activities'] = 'Zeitüberblick';
 
-$string['timeoverview_description'] = 'So viel Zeit verbringen Teilnehmer:innen im Schnitt mit den verschiedenen Aktivitäten.';
-$string['timeoverview_label_forum'] = 'Forum';
-$string['timeoverview_label_quiz'] = 'Test';
-$string['timeoverview_label_video'] = 'Video';
-$string['timeoverview_label_core'] = 'im Kurs';
-$string['timeoverview_label_bbb'] = 'BigBlueButton';
-$string['timeoverview_label_grade'] = 'Noten';
-$string['timeoverview_label_submission'] = 'Aufgaben';
-$string['timeoverview_label_resource'] = 'Ressourcen';
-$string['timeoverview_label_feedback'] = 'Feedback';
+$string['desc'] = 'So viel Zeit verbringen Teilnehmer:innen im Schnitt mit den verschiedenen Aktivitäten.';
+$string['forum'] = 'Forum';
+$string['quiz'] = 'Test';
+$string['video'] = 'Video';
+$string['course'] = 'im Kurs';
+$string['bbb'] = 'BigBlueButton';
+$string['grade'] = 'Noten';
+$string['submission'] = 'Aufgaben';
+$string['resource'] = 'Ressourcen';
+$string['feedback'] = 'Feedback';
 
 $string['time'] = 'Zeit';
 $string['clicks'] = 'Klicks';

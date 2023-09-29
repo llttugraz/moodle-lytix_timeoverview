@@ -31,17 +31,17 @@ export const init = (contextid, courseid, containerid) => {
     // XXX: The indeces have to match!
     const stringsPromise = Widget.getStrings({
         lytix_timeoverview: { // eslint-disable-line camelcase
-            differing: {
-                Resource: 'timeoverview_label_resource',
-                Video: 'timeoverview_label_video',
-                Forum: 'timeoverview_label_forum',
-                Course: 'timeoverview_label_core',
-                Quiz: 'timeoverview_label_quiz',
-                Grade: 'timeoverview_label_grade',
-                Submission: 'timeoverview_label_submission',
-                Feedback: 'timeoverview_label_feedback',
-                description: 'timeoverview_description',
-            },
+            identical: [
+                'resource',
+                'video',
+                'forum',
+                'course',
+                'quiz',
+                'grade',
+                'submission',
+                'feedback',
+                'desc',
+            ],
         }
     });
 
@@ -53,7 +53,7 @@ export const init = (contextid, courseid, containerid) => {
 
         const activities = data.Activities;
         const view = {
-            description: {text: strings.description},
+            description: {text: strings.desc},
             data: [],
         };
         const
@@ -66,9 +66,10 @@ export const init = (contextid, courseid, containerid) => {
                 continue;
             }
 
+            const activityType = activity.Type.toLowerCase();
             view.data.push({
-                activity: activity.Type.toLowerCase(),
-                label: strings[activity.Type],
+                activity: activityType,
+                label: strings[activityType],
                 percent: rounder.round(activity.MedianTime * 100),
             });
         }

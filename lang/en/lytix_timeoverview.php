@@ -33,16 +33,16 @@ $string['cron_refresh_lytix_timeoverview_cache'] = 'Refresh caches for lytix sub
 // Activity, Time Division.
 $string['overview_activities'] = 'Time Overview';
 
-$string['timeoverview_description'] = 'This shows the mean percentage of time students spend on different kinds of activity.';
-$string['timeoverview_label_forum'] = 'Forum';
-$string['timeoverview_label_quiz'] = 'Quiz';
-$string['timeoverview_label_video'] = 'Video';
-$string['timeoverview_label_core'] = 'Course';
-$string['timeoverview_label_bbb'] = 'BigBlueButton';
-$string['timeoverview_label_grade'] = 'Grade';
-$string['timeoverview_label_submission'] = 'Assignments';
-$string['timeoverview_label_resource'] = 'Resources';
-$string['timeoverview_label_feedback'] = 'Feedback';
+$string['desc'] = 'This shows the mean percentage of time students spend on different kinds of activity.';
+$string['forum'] = 'Forum';
+$string['quiz'] = 'Quiz';
+$string['video'] = 'Video';
+$string['course'] = 'Course';
+$string['bbb'] = 'BigBlueButton';
+$string['grade'] = 'Grade';
+$string['submission'] = 'Assignments';
+$string['resource'] = 'Resources';
+$string['feedback'] = 'Feedback';
 
 $string['time'] = 'Time';
 $string['clicks'] = 'Clicks';
