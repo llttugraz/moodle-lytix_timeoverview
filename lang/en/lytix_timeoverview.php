@@ -28,7 +28,7 @@ $string['pluginname'] = 'Lytix Timeoverview';
 $string['privacy:metadata'] = 'This plugin does not store any data.';
 
 $string['cachedef_timeoverview'] = 'Cache for the timeoverview subplugin.';
-$string['cron_refresh_lytix_timeoverview_cache'] = "Refresh caches for lytix subplugin timeoverview.";
+$string['cron_refresh_lytix_timeoverview_cache'] = 'Refresh caches for lytix subplugin timeoverview.';
 
 // Activity, Time Division.
 $string['overview_activities'] = 'Time Overview';
@@ -38,7 +38,7 @@ $string['timeoverview_label_forum'] = 'Forum';
 $string['timeoverview_label_quiz'] = 'Quiz';
 $string['timeoverview_label_video'] = 'Video';
 $string['timeoverview_label_core'] = 'Course';
-$string['timeoverview_label_bbb'] = "BigBlueButton";
+$string['timeoverview_label_bbb'] = 'BigBlueButton';
 $string['timeoverview_label_grade'] = 'Grade';
 $string['timeoverview_label_submission'] = 'Assignments';
 $string['timeoverview_label_resource'] = 'Resources';

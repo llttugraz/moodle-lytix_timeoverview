@@ -21,21 +21,21 @@
  * @copyright 2023 Educational Technologies, Graz, University of Technology
  * @license   http:www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = "Lytix Timeoverview";
-$string['privacy:metadata'] = "Ovaj plug-in dodatak ne pohranjuje nikakve podatke.";
-$string['cachedef_timeoverview'] = "Privremena pohrana za subplug-in dodatak timeoverview.";
-$string['cron_refresh_lytix_timeoverview_cache'] = "Osvježi privremenu pohranu za lytix subplug-in dodatak timeoverview basic";
-$string['overview_activities'] = "Pregled vremena";
-$string['timeoverview_description'] = "Prikazuje srednji postotak vremena koje studenti provode na raznim aktivnostima.";
-$string['timeoverview_label_forum'] = "Forum";
-$string['timeoverview_label_quiz'] = "Kviz";
-$string['timeoverview_label_video'] = "Video";
-$string['timeoverview_label_core'] = "Kurs";
-$string['timeoverview_label_bbb'] = "BigBlueButton";
-$string['timeoverview_label_grade'] = "Ocjena";
-$string['timeoverview_label_submission'] = "Zadaci";
-$string['timeoverview_label_resource'] = "Resursi";
-$string['timeoverview_label_feedback'] = "Završni upitnik";
-$string['time'] = "Vrijeme";
-$string['clicks'] = "Klikovi";
-$string['privacy:nullproviderreason'] = "Ovaj plug-in dodatak nema bazu podataka za pohranu korisničkih podataka. On koristi samo API interfejsa u mod_assign za pomoć u prikazivanju interfejsa ocjenjivanja.";
+$string['pluginname'] = 'Lytix Timeoverview';
+$string['privacy:metadata'] = 'Ovaj plug-in dodatak ne pohranjuje nikakve podatke.';
+$string['cachedef_timeoverview'] = 'Privremena pohrana za subplug-in dodatak timeoverview.';
+$string['cron_refresh_lytix_timeoverview_cache'] = 'Osvježi privremenu pohranu za lytix subplug-in dodatak timeoverview basic';
+$string['overview_activities'] = 'Pregled vremena';
+$string['timeoverview_description'] = 'Prikazuje srednji postotak vremena koje studenti provode na raznim aktivnostima.';
+$string['timeoverview_label_forum'] = 'Forum';
+$string['timeoverview_label_quiz'] = 'Kviz';
+$string['timeoverview_label_video'] = 'Video';
+$string['timeoverview_label_core'] = 'Kurs';
+$string['timeoverview_label_bbb'] = 'BigBlueButton';
+$string['timeoverview_label_grade'] = 'Ocjena';
+$string['timeoverview_label_submission'] = 'Zadaci';
+$string['timeoverview_label_resource'] = 'Resursi';
+$string['timeoverview_label_feedback'] = 'Završni upitnik';
+$string['time'] = 'Vrijeme';
+$string['clicks'] = 'Klikovi';
+$string['privacy:nullproviderreason'] = 'Ovaj plug-in dodatak nema bazu podataka za pohranu korisničkih podataka. On koristi samo API interfejsa u mod_assign za pomoć u prikazivanju interfejsa ocjenjivanja.';
