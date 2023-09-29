@@ -33,7 +33,7 @@ $string['cron_refresh_lytix_timeoverview_cache'] = 'Refresh caches for lytix sub
 // Activity, Time Division.
 $string['overview_activities'] = 'Time Overview';
 
-$string['desc'] = 'This shows the mean percentage of time students spend on different kinds of activity.';
+$string['desc'] = 'Analysis of time spent in course since the start of the course, aggregated. Values below one percent are not shown.';
 $string['forum'] = 'Forum';
 $string['quiz'] = 'Quiz';
 $string['video'] = 'Video';

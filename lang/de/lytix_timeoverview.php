@@ -30,7 +30,7 @@ $string['privacy:metadata'] = 'This plugin does not store any data.';
 // Activity, Time Division.
 $string['overview_activities'] = 'Zeitüberblick';
 
-$string['desc'] = 'So viel Zeit verbringen Teilnehmer:innen im Schnitt mit den verschiedenen Aktivitäten.';
+$string['desc'] = 'Analyse der gesamten Kurszeit seit Kursstart, aggregiert. Werte unter einem Prozent werden nicht angeführt.';
 $string['forum'] = 'Forum';
 $string['quiz'] = 'Test';
 $string['video'] = 'Video';
