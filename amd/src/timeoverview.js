@@ -49,32 +49,30 @@ export const init = (contextid, courseid, containerid) => {
     .then(values => {
         const
             strings = values[0],
-            data = values[1];
-
-        const activities = data.Activities;
-        const view = {
-            description: {text: strings.desc},
-            data: [],
-        };
-        const
+            data = values[1],
+            activities = data.Activities,
+            context = {
+                description: {text: strings.desc},
+                data: [],
+            },
             length = activities.length,
             rounder = new PercentRounder();
+
         for (let i = 0; i < length; ++i) {
             const activity = activities[i];
-
             if (activity.MedianTime <= 0) {
                 continue;
             }
 
             const activityType = activity.Type.toLowerCase();
-            view.data.push({
+            context.data.push({
                 activity: activityType,
                 label: strings[activityType],
                 percent: rounder.round(activity.MedianTime * 100),
             });
         }
 
-        return Templates.render('lytix_timeoverview/timeoverview', view);
+        return Templates.render('lytix_timeoverview/timeoverview', context);
     })
     .then(html => {
         Widget.getContentContainer(WIDGET_ID).insertAdjacentHTML('beforeend', html);
