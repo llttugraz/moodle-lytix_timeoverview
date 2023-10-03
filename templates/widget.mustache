@@ -34,13 +34,11 @@
   }
 }}
 
-<div id="timeoverview" class="widget loading">
-    <h3>{{#str}} overview_activities, lytix_timeoverview {{/str}}</h3>
+<div id='timeoverview' class='widget loading'>
+    <h4>{{#str}} overview_activities, lytix_timeoverview {{/str}}</h4>
     <div class='content d-flex flex-column justify-content-around p-3'></div>
 </div>
 
 {{#js}}
-    require(['lytix_timeoverview/timeoverview'], function(m) {
-        m.init({{contextid}}, {{courseid}});
-    });
+require(['lytix_timeoverview/timeoverview-lazy'], m => m.init({{contextid}}, {{courseid}}));
 {{/js}}

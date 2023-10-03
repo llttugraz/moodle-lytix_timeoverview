@@ -31,17 +31,16 @@ export const init = (contextid, courseid, containerid) => {
     // XXX: The indeces have to match!
     const stringsPromise = Widget.getStrings({
         lytix_timeoverview: { // eslint-disable-line camelcase
-            differing: {
-                Resource: 'timeoverview_label_resource',
-                Video: 'timeoverview_label_video',
-                Forum: 'timeoverview_label_forum',
-                Course: 'timeoverview_label_core',
-                Quiz: 'timeoverview_label_quiz',
-                Grade: 'timeoverview_label_grade',
-                Submission: 'timeoverview_label_submission',
-                Feedback: 'timeoverview_label_feedback',
-                description: 'timeoverview_description',
-            },
+            identical: [
+                'resource',
+                'video',
+                'forum',
+                'course',
+                'quiz',
+                'grade',
+                'submission',
+                'feedback',
+            ],
         }
     });
 
@@ -49,31 +48,27 @@ export const init = (contextid, courseid, containerid) => {
     .then(values => {
         const
             strings = values[0],
-            data = values[1];
-
-        const activities = data.Activities;
-        const view = {
-            description: {text: strings.description},
-            data: [],
-        };
-        const
+            data = values[1],
+            activities = data.Activities,
+            context = { data: [] },
             length = activities.length,
             rounder = new PercentRounder();
+
         for (let i = 0; i < length; ++i) {
             const activity = activities[i];
-
             if (activity.MedianTime <= 0) {
                 continue;
             }
 
-            view.data.push({
-                activity: activity.Type.toLowerCase(),
-                label: strings[activity.Type],
+            const activityType = activity.Type.toLowerCase();
+            context.data.push({
+                activity: activityType,
+                label: strings[activityType],
                 percent: rounder.round(activity.MedianTime * 100),
             });
         }
 
-        return Templates.render('lytix_timeoverview/timeoverview', view);
+        return Templates.render('lytix_timeoverview/timeoverview', context);
     })
     .then(html => {
         Widget.getContentContainer(WIDGET_ID).insertAdjacentHTML('beforeend', html);

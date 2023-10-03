@@ -30,49 +30,16 @@ $string['privacy:metadata'] = 'This plugin does not store any data.';
 // Activity, Time Division.
 $string['overview_activities'] = 'Zeitüberblick';
 
-$string['timeoverview_description'] = 'So viel Zeit verbringen Teilnehmer:innen im Schnitt mit den verschiedenen Aktivitäten.';
-$string['timeoverview_label_forum'] = 'Forum';
-$string['timeoverview_label_quiz'] = 'Test';
-$string['timeoverview_label_video'] = 'Video';
-$string['timeoverview_label_core'] = 'im Kurs';
-$string['timeoverview_label_bbb'] = "BigBlueButton";
-$string['timeoverview_label_grade'] = 'Noten';
-$string['timeoverview_label_submission'] = 'Aufgaben';
-$string['timeoverview_label_resource'] = 'Ressourcen';
-$string['timeoverview_label_feedback'] = 'Feedback';
-
-$string['all'] = 'Alle';
-$string['average_all'] = "durchnitt Gesamt";
-$string['user_all'] = "ich Gesamt";
-$string['all_core'] = "durchnitt im Kurs";
-$string['user_core'] = "ich im Kurs";
-$string['all_forum'] = "durchnitt im Forum";
-$string['user_forum'] = "ich im Forum";
-$string['all_grade'] = "durchnitt in Bewertung";
-$string['user_grade'] = "ich in Bewertung";
-$string['all_submission'] = "durchnitt für Abgaben";
-$string['user_submission'] = "ich für Abgaben";
-$string['all_resource'] = "durchnitt für Ressourcen";
-$string['user_resource'] = "ich für Ressourcen";
-$string['all_quiz'] = "durchnitt für Quizze";
-$string['user_quiz'] = "ich für Quizze";
-$string['all_bbb'] = "durchnittich in BBB";
-$string['user_bbb'] = "ich in BBB";
-$string['no_activites_found'] = "Keine Aktivitäten in für diesen Kurs gefunden.";
-$string['sum_user'] = "Summe Benutzer: ";
-$string['sum_average'] = "Summe Durchschnitt: ";
-
-$string['core'] = "Kurs";
-$string['forum'] = "Forum";
-$string['grade'] = "Note";
-$string['submission'] = "Aufgabe";
-$string['resource'] = "Ressource";
-$string['quiz'] = "Quiz";
-$string['video'] = "Video";
-$string['bbb'] = "BigBlueButton";
-$string['label'] = "Textfeld";
-$string['feedback'] = "Feedback";
+$string['desc'] = 'Analyse der gesamten Kurszeit seit Kursstart, aggregiert. Werte unter einem Prozent werden nicht angeführt.';
+$string['forum'] = 'Forum';
+$string['quiz'] = 'Test';
+$string['video'] = 'Video';
+$string['course'] = 'im Kurs';
+$string['bbb'] = 'BigBlueButton';
+$string['grade'] = 'Noten';
+$string['submission'] = 'Aufgaben';
+$string['resource'] = 'Ressourcen';
+$string['feedback'] = 'Feedback';
 
 $string['time'] = 'Zeit';
 $string['clicks'] = 'Klicks';
-

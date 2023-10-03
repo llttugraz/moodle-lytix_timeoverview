@@ -28,53 +28,21 @@ $string['pluginname'] = 'Lytix Timeoverview';
 $string['privacy:metadata'] = 'This plugin does not store any data.';
 
 $string['cachedef_timeoverview'] = 'Cache for the timeoverview subplugin.';
-$string['cron_refresh_lytix_timeoverview_cache'] = "Refresh caches for lytix subplugin timeoverview.";
+$string['cron_refresh_lytix_timeoverview_cache'] = 'Refresh caches for lytix subplugin timeoverview.';
 
 // Activity, Time Division.
 $string['overview_activities'] = 'Time Overview';
 
-$string['timeoverview_description'] = 'This shows the mean percentage of time students spend on different kinds of activity.';
-$string['timeoverview_label_forum'] = 'Forum';
-$string['timeoverview_label_quiz'] = 'Quiz';
-$string['timeoverview_label_video'] = 'Video';
-$string['timeoverview_label_core'] = 'Course';
-$string['timeoverview_label_bbb'] = "BigBlueButton";
-$string['timeoverview_label_grade'] = 'Grade';
-$string['timeoverview_label_submission'] = 'Assignments';
-$string['timeoverview_label_resource'] = 'Resources';
-$string['timeoverview_label_feedback'] = 'Feedback';
-
-$string['all'] = 'All';
-$string['average_all'] = "average time";
-$string['user_all'] = "my time";
-$string['all_core'] = "average in course";
-$string['user_core'] = "me in course";
-$string['all_forum'] = "average in forum";
-$string['user_forum'] = "me in forum";
-$string['all_grade'] = "average in grading";
-$string['user_grade'] = "me in grading";
-$string['all_submission'] = "average for submissons";
-$string['user_submission'] = "me for submissions";
-$string['all_resource'] = "average for resources";
-$string['user_resource'] = "me for resources";
-$string['all_quiz'] = "average for quizzes";
-$string['user_quiz'] = "me for quizzes";
-$string['all_bbb'] = "average in BBB";
-$string['user_bbb'] = "me in BBB";
-$string['no_activites_found'] = "No activites for this course found.";
-$string['sum_user'] = "Sum User: ";
-$string['sum_average'] = "Sum Average: ";
-
-$string['core'] = "Course";
-$string['forum'] = "Forum";
-$string['grade'] = "Grade";
-$string['submission'] = "Submission";
-$string['resource'] = "Resource";
-$string['quiz'] = "Quiz";
-$string['video'] = "Video";
-$string['bbb'] = "BigBlueButton";
-$string['label'] = "Label";
-$string['feedback'] = "Feedback";
+$string['desc'] = 'Analysis of time spent in course since the start of the course, aggregated. Values below one percent are not shown.';
+$string['forum'] = 'Forum';
+$string['quiz'] = 'Quiz';
+$string['video'] = 'Video';
+$string['course'] = 'Course';
+$string['bbb'] = 'BigBlueButton';
+$string['grade'] = 'Grade';
+$string['submission'] = 'Assignments';
+$string['resource'] = 'Resources';
+$string['feedback'] = 'Feedback';
 
 $string['time'] = 'Time';
 $string['clicks'] = 'Clicks';
