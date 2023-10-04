@@ -50,7 +50,7 @@ export const init = (contextid, courseid, containerid) => {
             strings = values[0],
             data = values[1],
             activities = data.Activities,
-            context = { data: [] },
+            context = {data: []},
             length = activities.length,
             rounder = new PercentRounder();
 

@@ -1,46 +1,22 @@
-# lytix\_timeoverview
+# lytix_timeoverview
 
-This widget shows how participants spend their time in the course.
+## Overview
+The `lytix_timeoverview` module serves as a comprehensive tool to provide a detailed view of time-related metrics in Moodle. This plugin is especially essential for capturing user interactions and activities that are not automatically logged by Moodle, particularly within the custom-developed dashboard.
 
+## Features
 
-## Visualisation
+### Backend Database Interaction
+- Utilizes PHP for backend operations, ensuring smooth data storage and retrieval.
+- Interactions recorded via the dashboard are stored in the backend for future access and analysis.
 
-In order too bring visual diversity a stacked bar chart is being used; also, the potentially high number of data points makes a horizontally scalable chart the better option.
+### Essential Database Tables
+- The module integrates two crucial database tables:
+    - `lytix logs logs`: Captures actions related to the custom dashboard.
+    - `lytix logs aggregated logs`: Stores aggregated data of student activities.
 
+## Usage
+1. Install and activate the `lytix_timeoverview` module in your Moodle instance.
+2. The plugin will start capturing specific interactions within the custom dashboard.
+3. Access the recorded logs for insights into user activities and generate detailed reports as needed.
 
-## JSON
-
-There should be an entry for every kind of Activity that makes sense to be tracked.
-
-`TimePerStudent` is not yet implemented.  
-In the future it might even be necessary to add an additional array `GradePerStudent`.
-
-```
-// TODO: use struct of arrays instead of array of structs
-{
-	// sorted descending by MedianTime
-	Activities: [
-		{
-			Type: <string>, // Quiz, Video, Forum, …
-			MedianTime: <number>, // share >= 0 && <= 1
-			// TimePerStudent: [ <number>, … ], // sorted descending; share >= 0 && <= 1
-		},…
-	]
-}
-```
-
-### Example
-
-```
-{
-    Activities: [
-        { Type: 'Forum', MedianTime: 0.15 },
-        { Type: 'Course', MedianTime: 0.15 },
-        { Type: 'Quiz', MedianTime: 0.2 },
-        { Type: 'Video', MedianTime: 0.25 },
-        { Type: 'Grade', MedianTime: 0.05 },
-        { Type: 'Resource', MedianTime: 0.1 },
-        { Type: 'Submission', MedianTime: 0.1 }
-    ]
-}
-```
+> **Note**: Ensure you have the required permissions to install, activate, and access the logs in the `lytix_timeoverview` module in your Moodle courses.

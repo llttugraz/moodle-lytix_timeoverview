@@ -25,10 +25,10 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version      = 2023091100; // The current plugin version (Date: YYYYMMDDXX).
-$plugin->maturity     = MATURITY_STABLE;
-$plugin->requires     = 2021051700; // Requires this Moodle version 3.11.
+$plugin->version   = 2023100300; // The current plugin version (Date: YYYYMMDDXX).
+$plugin->maturity  = MATURITY_STABLE;
+$plugin->requires = 2022112800.00; // Requires this Moodle version 4.1.
 $plugin->component    = 'lytix_timeoverview'; // Full name of the plugin.
 $plugin->dependencies = ['lytix_helper' => ANY_VERSION];
-$plugin->release      = 'v1.0.8';
+$plugin->release      = 'v1.0.9';
 $plugin->supported    = [401, 401];
