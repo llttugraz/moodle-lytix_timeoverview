@@ -30,15 +30,14 @@
   Example context (json):
   {
       "contextid": 0,
-      "courseid": 0
+      "courseid": 0,
+      "widgetheading": 3
   }
 }}
-
 <div id='timeoverview' class='widget loading'>
-    <h4>{{#str}} overview_activities, lytix_timeoverview {{/str}}</h4>
+    <h{{{widgetheading}}}>{{#str}} overview_activities, lytix_timeoverview {{/str}}</h{{{widgetheading}}}>
     <div class='content d-flex flex-column justify-content-around p-3'></div>
 </div>
-
 {{#js}}
 require(['lytix_timeoverview/timeoverview-lazy'], m => m.init({{contextid}}, {{courseid}}));
 {{/js}}
