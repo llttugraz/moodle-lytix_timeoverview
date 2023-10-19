@@ -107,7 +107,6 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      * @covers \lytix_timeoverview\timeoverview::load_for_cache
      * @covers \lytix_timeoverview\timeoverview::get_instance_for_cache
      * @covers \lytix_timeoverview\timeoverview::get_timeoverview
-     * @covers \lytix_timeoverview\timeoverview::aggregated_logstore_get
      * @covers \lytix_timeoverview\cache_reset::reset_cache
      * @return void
      * @throws \dml_exception
@@ -125,7 +124,6 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      * @covers \lytix_timeoverview\timeoverview::load_for_cache
      * @covers \lytix_timeoverview\timeoverview::get_instance_for_cache
      * @covers \lytix_timeoverview\timeoverview::get_timeoverview
-     * @covers \lytix_timeoverview\timeoverview::aggregated_logstore_get
      * @covers \lytix_timeoverview\cache_reset::reset_cache
      * @return void
      * @throws \dml_exception

@@ -93,213 +93,46 @@ class timeoverview implements \cache_data_source {
     }
 
     /**
-     * Get timeoverview.
+     * Get the data for timeoverview widget. We use the aggregation method from the helper class and
+     * style the data accordingly.
      *
      * @param int $courseid
      * @return array
      */
     private static function get_timeoverview($courseid) {
 
-        try {
-            $coursecontext = context_course::instance($courseid);
-            $result        = self::aggregated_logstore_get($coursecontext->id, $courseid);
-            $records       = $result['data'];
-        } catch (\dml_exception $e) {
-            return [$e->getMessage()];
-        }
-
-        // Times arrays.
-        $coretime       = [];
-        $forumtime      = [];
-        $gradetime      = [];
-        $submissiontime = [];
-        $resourcetime   = [];
-        $quiztime       = [];
-        $videotime      = [];
-        $feedbacktime   = [];
-
-        foreach ($records as $record) {
-            if ($record['Aggregation'] == 'Time' || $record['Aggregation'] == 'Zeit') {
-                $coretime[]       = $record['core'];
-                $forumtime[]      = $record['forum'];
-                $gradetime[]      = $record['grade'];
-                $submissiontime[] = $record['submission'];
-                $resourcetime[]   = $record['resource'];
-                $quiztime[]       = $record['quiz'];
-                $videotime[]      = $record['video'];
-                $feedbacktime[]   = $record['feedback'];
-            }
-        }
-
-        $coremediantime       = calculation_helper::median($coretime);
-        $forummediantime      = calculation_helper::median($forumtime);
-        $grademediantime      = calculation_helper::median($gradetime);
-        $submissionmediantime = calculation_helper::median($submissiontime);
-        $resourcemediantime   = calculation_helper::median($resourcetime);
-        $quizmediantime       = calculation_helper::median($quiztime);
-        $videomediantime      = calculation_helper::median($videotime);
-        $feedbackmediantime   = calculation_helper::median($feedbacktime);
-
-        $data = [];
-
-        $allmediantime = $coremediantime + $forummediantime + $grademediantime + $submissionmediantime +
-                         $resourcemediantime + $quizmediantime + $videomediantime + $feedbackmediantime;
-
-        $coremediantime       = calculation_helper::div($coremediantime, $allmediantime);
-        $forummediantime      = calculation_helper::div($forummediantime, $allmediantime);
-        $grademediantime      = calculation_helper::div($grademediantime, $allmediantime);
-        $submissionmediantime = calculation_helper::div($submissionmediantime, $allmediantime);
-        $resourcemediantime   = calculation_helper::div($resourcemediantime, $allmediantime);
-        $quizmediantime       = calculation_helper::div($quizmediantime, $allmediantime);
-        $videomediantime      = calculation_helper::div($videomediantime, $allmediantime);
-        $feedbackmediantime   = calculation_helper::div($feedbackmediantime, $allmediantime);
-
-        $data[] = ['Type' => 'Resource', 'MedianTime' => $resourcemediantime];
-        $data[] = ['Type' => 'Video', 'MedianTime' => $videomediantime];
-        $data[] = ['Type' => 'Submission', 'MedianTime' => $submissionmediantime];
-        $data[] = ['Type' => 'Quiz', 'MedianTime' => $quizmediantime];
-        $data[] = ['Type' => 'Forum', 'MedianTime' => $forummediantime];
-        $data[] = ['Type' => 'Grade', 'MedianTime' => $grademediantime];
-        $data[] = ['Type' => 'Course', 'MedianTime' => $coremediantime];
-        $data[] = ['Type' => 'Feedback', 'MedianTime' => $feedbackmediantime];
-
-        $return['Activities'] = $data;
-        return $return;
-    }
-
-    /**
-     * Gets activities.
-     *
-     * @param int $contextid
-     * @param int $courseid
-     * @return array[]
-     * @throws \coding_exception
-     * @throws \dml_exception
-     */
-    public static function aggregated_logstore_get($contextid, $courseid) {
-        global $DB;
-
-        $start  = course_settings::getcoursestartdate($courseid);
-        date_add($start, date_interval_create_from_date_string('2 hours'));
-
-        // Use smaller date.
+        $start = course_settings::getcoursestartdate($courseid);
         $courseend = course_settings::getcourseenddate($courseid);
-        $today       = new \DateTime('today midnight');
-        $end         = null;
-        if ($today->getTimestamp() < $courseend->getTimestamp()) {
+        $today = new \DateTime('today midnight');
+        $end = null;
+
+        // Special case for iMooX. There is no Semesterend or a old one.
+        if ($courseend && $courseend->getTimestamp() <= $today->getTimestamp()) {
             $end = $today;
         } else {
             $end = $courseend;
         }
-        date_add($end, date_interval_create_from_date_string('2 hours'));
 
-        $data = [];
-
-        // First get records from start till today.
-        $cnt = "SELECT COUNT(*) FROM {lytix_helper_dly_mdl_acty} logs
-                WHERE logs.courseid = :courseid AND logs.contextid = :contextid
-                AND logs.timestamp >= :startdate AND logs.timestamp <= :enddate";
-
-        $params['courseid']  = $courseid;
-        $params['contextid'] = $contextid;
-        $params['startdate'] = $start->getTimestamp();
-        $params['enddate']   = $end->getTimestamp();
-
-        $totalrecords = $DB->count_records_sql($cnt, $params);
-
-        // Times.
-        $coretime       = 0;
-        $forumtime      = 0;
-        $gradetime      = 0;
-        $submissiontime = 0;
-        $resourcetime   = 0;
-        $quiztime       = 0;
-        $bbbtime        = 0;
-        $h5ptime        = 0;
-        $feedbacktime   = 0;
-
-        // Clicks.
-        $coreclick       = 0;
-        $forumclick      = 0;
-        $gradeclick      = 0;
-        $submissionclick = 0;
-        $resourceclick   = 0;
-        $quizclick       = 0;
-        $bbbclick        = 0;
-        $h5pclick        = 0;
-        $feedbackclick   = 0;
-
-        $processed = 0;
-        $limitfrom = 0;
-        $limitnum  = 75000;
-
-        while ($processed < $totalrecords) {
-            // Get records from start till today.
-            $sql = "SELECT * FROM {lytix_helper_dly_mdl_acty} logs
-                WHERE logs.courseid = :courseid AND logs.contextid = :contextid
-                AND logs.timestamp >= :startdate AND logs.timestamp <= :enddate";
-
-            $params['courseid']  = $courseid;
-            $params['contextid'] = $contextid;
-            $params['startdate'] = $start->getTimestamp();
-            $params['enddate']   = $end->getTimestamp();
-
-            $userrecords = $DB->get_records_sql($sql, $params, $limitfrom, $limitnum);
-
-            foreach ($userrecords as $record) {
-                // Aggregate specific times.
-                $coretime        += $record->core_time;
-                $coreclick       += $record->core_click;
-                $forumtime       += $record->forum_time;
-                $forumclick      += $record->forum_click;
-                $gradetime       += $record->grade_time;
-                $gradeclick      += $record->grade_click;
-                $submissiontime  += $record->submission_time;
-                $submissionclick += $record->submission_click;
-                $resourcetime    += $record->resource_time;
-                $resourceclick   += $record->resource_click;
-                $quiztime        += $record->quiz_time;
-                $quizclick       += $record->quiz_click;
-                $bbbtime         += $record->bbb_time;
-                $bbbclick        += $record->bbb_click;
-                $h5ptime         += $record->h5p_time;
-                $h5pclick        += $record->h5p_click;
-                $feedbacktime    += $record->feedback_time;
-                $feedbackclick   += $record->feedback_click;
-            }
-
-            $processed += count($userrecords);
-            $limitfrom += $limitnum;
+        try {
+            $record = calculation_helper::get_activity_aggregation($courseid, $start->getTimestamp(), $end->getTimestamp());
+        } catch (\coding_exception $e) {
+        } catch (\dml_exception $e) {
         }
 
-        $data[] = [
-                'Aggregation' => get_string('time', 'lytix_timeoverview'),
+        $sum = $record['time']['core'] + $record['time']['forum'] + $record['time']['grade'] +
+            $record['time']['submission'] + $record['time']['resource'] + $record['time']['quiz'] +
+            $record['time']['video'] + $record['time']['feedback'];
 
-                'core'       => $coretime,
-                'forum'      => $forumtime,
-                'grade'      => $gradetime,
-                'submission' => $submissiontime,
-                'resource'   => $resourcetime,
-                'quiz'       => $quiztime,
-                'video'      => $bbbtime + $h5ptime,
-                'feedback'  => $feedbacktime,
-        ];
+        $data[] = ['Type' => 'Resource', 'MedianTime' => calculation_helper::div($record['time']['resource'], $sum)];
+        $data[] = ['Type' => 'Video', 'MedianTime' => calculation_helper::div($record['time']['video'], $sum)];
+        $data[] = ['Type' => 'Submission', 'MedianTime' => calculation_helper::div($record['time']['submission'], $sum)];
+        $data[] = ['Type' => 'Quiz', 'MedianTime' => calculation_helper::div($record['time']['quiz'], $sum)];
+        $data[] = ['Type' => 'Forum', 'MedianTime' => calculation_helper::div($record['time']['forum'], $sum)];
+        $data[] = ['Type' => 'Grade', 'MedianTime' => calculation_helper::div($record['time']['grade'], $sum)];
+        $data[] = ['Type' => 'Course', 'MedianTime' => calculation_helper::div($record['time']['core'], $sum)];
+        $data[] = ['Type' => 'Feedback', 'MedianTime' => calculation_helper::div($record['time']['feedback'], $sum)];
 
-        $data[] = [
-                'Aggregation' => get_string('clicks', 'lytix_timeoverview'),
-
-                'core'       => $coreclick,
-                'forum'      => $forumclick,
-                'grade'      => $gradeclick,
-                'submission' => $submissionclick,
-                'resource'   => $resourceclick,
-                'quiz'       => $quizclick,
-                'video'      => $bbbclick + $h5pclick,
-                'feedback'  => $feedbackclick,
-        ];
-
-        return [
-                'data' => $data,
-        ];
+        $return['Activities'] = $data;
+        return $return;
     }
 }
