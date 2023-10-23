@@ -41,7 +41,7 @@ use lytix_helper\dummy;
  * @coversDefaultClass  \lytix_timeoverview\timeoverview_lib
  * @group learners_corner
  */
-class timeoverview_test extends externallib_advanced_testcase {
+class timeoverview_lib_test extends externallib_advanced_testcase {
     /**
      * Variable for course.
      *

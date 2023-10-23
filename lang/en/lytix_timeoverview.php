@@ -27,8 +27,8 @@ $string['pluginname'] = 'Lytix Timeoverview';
 
 $string['privacy:metadata'] = 'This plugin does not store any data.';
 
-$string['cachedef_timeoverview'] = 'Cache for the timeoverview subplugin.';
-$string['cron_refresh_lytix_timeoverview_cache'] = 'Refresh caches for lytix subplugin timeoverview.';
+$string['cachedef_timeoverview'] = 'Cache for lytix_timeoverview.';
+$string['cron_refresh_lytix_timeoverview_cache'] = 'Refresh cache for lytix_timeoverview.';
 
 // Activity, Time Division.
 $string['overview_activities'] = 'Time Overview';

@@ -97,7 +97,7 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      */
     public function test_task_get_name() {
         $task = new refresh_timeoverview_cache();
-        self::assertEquals("Refresh caches for lytix subplugin timeoverview.", $task->get_name());
+        self::assertEquals(get_string('cron_refresh_lytix_timeoverview_cache', 'lytix_timeoverview'), $task->get_name());
     }
 
     /**
