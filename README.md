@@ -80,7 +80,7 @@ Detail what personal data the plugin stores and how it handles this data.
 
 ## Changelog
 
-### Version v1.1.2
+### Version v1.1.3
 
 - Release of the plugin for Moodle 4.2 and 4.3.
 - Move the calculation to lytix_helper.
