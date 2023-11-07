@@ -26,17 +26,17 @@
 namespace lytix_timeoverview;
 
 defined('MOODLE_INTERNAL') || die();
-global $CFG;
 
-require_once($CFG->dirroot . '/lib/externallib.php');
-require_once($CFG->dirroot . '/webservice/tests/helpers.php');
+global $CFG;
+require_once("{$CFG->dirroot}/webservice/tests/helpers.php");
 
 use lytix_helper\dummy;
 use lytix_timeoverview\task\refresh_timeoverview_cache;
 
 /**
  * Building cache tests.
- * @group learners_corner
+ *
+ * @runTestsInSeparateProcesses
  * @coversDefaultClass \lytix_timeoverview\task\refresh_timeoverview_cache
  */
 class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
@@ -59,6 +59,8 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
     public function setUp(): void {
         $this->resetAfterTest(true);
         $this->setAdminUser();
+        global $CFG;
+        require_once("{$CFG->libdir}/externallib.php");
 
         $date = new \DateTime('4 months ago');
         date_add($date, date_interval_create_from_date_string('6 hours'));
