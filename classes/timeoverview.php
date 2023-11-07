@@ -113,11 +113,7 @@ class timeoverview implements \cache_data_source {
             $end = $courseend;
         }
 
-        try {
-            $record = calculation_helper::get_activity_aggregation($courseid, $start->getTimestamp(), $end->getTimestamp());
-        } catch (\coding_exception $e) {
-        } catch (\dml_exception $e) {
-        }
+        $record = calculation_helper::get_activity_aggregation($courseid, $start->getTimestamp(), $end->getTimestamp());
 
         $sum = $record['time']['core'] + $record['time']['forum'] + $record['time']['grade'] +
             $record['time']['submission'] + $record['time']['resource'] + $record['time']['quiz'] +
