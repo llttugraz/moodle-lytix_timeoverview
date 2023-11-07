@@ -26,17 +26,17 @@
 namespace lytix_timeoverview;
 
 defined('MOODLE_INTERNAL') || die();
-global $CFG;
 
-require_once($CFG->dirroot . '/lib/externallib.php');
-require_once($CFG->dirroot . '/webservice/tests/helpers.php');
+global $CFG;
+require_once("{$CFG->dirroot}/webservice/tests/helpers.php");
 
 use lytix_helper\dummy;
 use lytix_timeoverview\task\refresh_timeoverview_cache;
 
 /**
  * Building cache tests.
- * @group learners_corner
+ *
+ * @runTestsInSeparateProcesses
  * @coversDefaultClass \lytix_timeoverview\task\refresh_timeoverview_cache
  */
 class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
@@ -59,6 +59,8 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
     public function setUp(): void {
         $this->resetAfterTest(true);
         $this->setAdminUser();
+        global $CFG;
+        require_once("{$CFG->libdir}/externallib.php");
 
         $date = new \DateTime('4 months ago');
         date_add($date, date_interval_create_from_date_string('6 hours'));
@@ -97,7 +99,7 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      */
     public function test_task_get_name() {
         $task = new refresh_timeoverview_cache();
-        self::assertEquals("Refresh caches for lytix subplugin timeoverview.", $task->get_name());
+        self::assertEquals(get_string('cron_refresh_lytix_timeoverview_cache', 'lytix_timeoverview'), $task->get_name());
     }
 
     /**
@@ -107,7 +109,6 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      * @covers \lytix_timeoverview\timeoverview::load_for_cache
      * @covers \lytix_timeoverview\timeoverview::get_instance_for_cache
      * @covers \lytix_timeoverview\timeoverview::get_timeoverview
-     * @covers \lytix_timeoverview\timeoverview::aggregated_logstore_get
      * @covers \lytix_timeoverview\cache_reset::reset_cache
      * @return void
      * @throws \dml_exception
@@ -125,7 +126,6 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      * @covers \lytix_timeoverview\timeoverview::load_for_cache
      * @covers \lytix_timeoverview\timeoverview::get_instance_for_cache
      * @covers \lytix_timeoverview\timeoverview::get_timeoverview
-     * @covers \lytix_timeoverview\timeoverview::aggregated_logstore_get
      * @covers \lytix_timeoverview\cache_reset::reset_cache
      * @return void
      * @throws \dml_exception

@@ -63,8 +63,8 @@ class timeoverview_lib extends \external_api {
                                             'MedianTime' => new \external_value(PARAM_FLOAT,
                                                                             'Duration of time spend for this target (median)',
                                                                             VALUE_REQUIRED),
-                                    ], 'desc', false
-                                )
+                                    ], 'external_single_structure for activities', VALUE_OPTIONAL
+                                ), 'external_multiple_structure for activities', VALUE_OPTIONAL
                         ),
                 ]
         );

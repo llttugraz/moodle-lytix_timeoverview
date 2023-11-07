@@ -50,14 +50,15 @@ class refresh_timeoverview_cache extends \core\task\scheduled_task {
      * @throws \dml_exception
      */
     public function execute(): bool {
+        global $DB;
         if (get_config('local_lytix', 'platform') == 'learners_corner' ||
             get_config('local_lytix', 'platform') == 'course_dashboard' ||
             get_config('local_lytix', 'platform') == 'creators_dashboard') {
             $courseids = explode(',', get_config('local_lytix', 'course_list'));
             $success = true;
             foreach ($courseids as $courseid) {
-                if (!$courseid) {
-                    $success = false;
+                if (!$DB->record_exists('course', ['id' => $courseid])) {
+                    return false;
                 }
                 if (!cache_reset::reset_cache((int)$courseid)) {
                     echo "There was an error deleting the cache for course $courseid.";
