@@ -28,8 +28,10 @@
 
 namespace lytix_timeoverview;
 
-use core_plugin_manager;
-use lytix_timeoverview\timeoverview;
+defined('MOODLE_INTERNAL') || die();
+
+global $CFG;
+require_once("{$CFG->libdir}/externallib.php");
 
 /**
  * Class timeoverview_lib
