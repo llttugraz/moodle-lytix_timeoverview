@@ -29,15 +29,15 @@
 defined('MOODLE_INTERNAL') || die();
 
 // We defined the web service functions to install.
-$functions = array(
-        'local_lytix_lytix_timeoverview_timeoverview_get'                  => array(
+$functions = [
+        'local_lytix_lytix_timeoverview_timeoverview_get'                  => [
                 'classname'   => 'lytix_timeoverview\\timeoverview_lib',
                 'methodname'  => 'timeoverview_get',
                 'description' => 'Get the data from the time_divsion lib',
                 'type'        => 'read',
-                'ajax'        => 'true'
-        ),
-);
+                'ajax'        => 'true',
+        ],
+];
 
 
 

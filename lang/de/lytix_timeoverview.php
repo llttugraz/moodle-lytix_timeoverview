@@ -23,23 +23,19 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+$string['bbb'] = 'BigBlueButton';
+$string['clicks'] = 'Klicks';
+$string['course'] = 'im Kurs';
+$string['desc'] = 'Analyse der gesamten Kurszeit seit Kursstart, aggregiert. Werte unter einem Prozent werden nicht angeführt.';
+$string['feedback'] = 'Feedback';
+$string['forum'] = 'Forum';
+$string['grade'] = 'Noten';
+$string['overview_activities'] = 'Zeitüberblick';
 $string['pluginname'] = 'Lytix Zeitüberblick';
 
 $string['privacy:metadata'] = 'This plugin does not store any data.';
-
-// Activity, Time Division.
-$string['overview_activities'] = 'Zeitüberblick';
-
-$string['desc'] = 'Analyse der gesamten Kurszeit seit Kursstart, aggregiert. Werte unter einem Prozent werden nicht angeführt.';
-$string['forum'] = 'Forum';
 $string['quiz'] = 'Test';
-$string['video'] = 'Video';
-$string['course'] = 'im Kurs';
-$string['bbb'] = 'BigBlueButton';
-$string['grade'] = 'Noten';
-$string['submission'] = 'Aufgaben';
 $string['resource'] = 'Ressourcen';
-$string['feedback'] = 'Feedback';
-
+$string['submission'] = 'Aufgaben';
 $string['time'] = 'Zeit';
-$string['clicks'] = 'Klicks';
+$string['video'] = 'Video';

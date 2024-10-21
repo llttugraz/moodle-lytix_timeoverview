@@ -21,21 +21,21 @@
  * @copyright 2023 Educational Technologies, Graz, University of Technology
  * @license   http:www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+$string['bbb'] = 'BigBlueButton';
+$string['cachedef_timeoverview'] = 'Privremena pohrana za subplug-in dodatak timeoverview.';
+$string['clicks'] = 'Klikovi';
+$string['course'] = 'Tečaj';
+$string['cron_refresh_lytix_timeoverview_cache'] = 'Osvježi privremenu pohranu za lytix subplug-in dodatak timeoverview basic';
+$string['desc'] = 'Prikazuje srednji postotak vremena koje studenti provode na raznim aktivnostima.';
+$string['feedback'] = 'Završni upitnik';
+$string['forum'] = 'Forum';
+$string['grade'] = 'Ocjena';
+$string['overview_activities'] = 'Pregled vremena';
 $string['pluginname'] = 'Lytix Timeoverview';
 $string['privacy:metadata'] = 'Ovaj plug-in dodatak ne pohranjuje nikakve podatke.';
-$string['cachedef_timeoverview'] = 'Privremena pohrana za subplug-in dodatak timeoverview.';
-$string['cron_refresh_lytix_timeoverview_cache'] = 'Osvježi privremenu pohranu za lytix subplug-in dodatak timeoverview basic';
-$string['overview_activities'] = 'Pregled vremena';
-$string['desc'] = 'Prikazuje srednji postotak vremena koje studenti provode na raznim aktivnostima.';
-$string['forum'] = 'Forum';
-$string['quiz'] = 'Kviz';
-$string['video'] = 'Video';
-$string['course'] = 'Tečaj';
-$string['bbb'] = 'BigBlueButton';
-$string['grade'] = 'Ocjena';
-$string['submission'] = 'Zadaci';
-$string['resource'] = 'Resursi';
-$string['feedback'] = 'Završni upitnik';
-$string['time'] = 'Vrijeme';
-$string['clicks'] = 'Klikovi';
 $string['privacy:nullproviderreason'] = 'Ovaj plug-in dodatak nema bazu podataka za pohranu korisničkih podataka. On upotrebljava samo API sučelja u mod_assign za pomoć u prikazivanju sučelja ocjenjivanja.';
+$string['quiz'] = 'Kviz';
+$string['resource'] = 'Resursi';
+$string['submission'] = 'Zadaci';
+$string['time'] = 'Vrijeme';
+$string['video'] = 'Video';
