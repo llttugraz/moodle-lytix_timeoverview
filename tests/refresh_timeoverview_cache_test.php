@@ -39,7 +39,7 @@ use lytix_timeoverview\task\refresh_timeoverview_cache;
  * @runTestsInSeparateProcesses
  * @coversDefaultClass \lytix_timeoverview\task\refresh_timeoverview_cache
  */
-class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
+final class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
     /**
      * Course variable.
      * @var \stdClass|null
@@ -57,6 +57,7 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      * Sets up course for tests.
      */
     public function setUp(): void {
+        parent::setUp();
         $this->resetAfterTest(true);
         $this->setAdminUser();
         global $CFG;
@@ -97,7 +98,7 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      * @covers ::get_name
      * @return void
      */
-    public function test_task_get_name() {
+    public function test_task_get_name(): void {
         $task = new refresh_timeoverview_cache();
         self::assertEquals(get_string('cron_refresh_lytix_timeoverview_cache', 'lytix_timeoverview'), $task->get_name());
     }
@@ -114,7 +115,7 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      * @throws \dml_exception
      * @throws \coding_exception
      */
-    public function test_task_execute() {
+    public function test_task_execute(): void {
         $task = new refresh_timeoverview_cache();
         self::assertTrue($task->execute(), "task failed.");
     }
@@ -131,7 +132,7 @@ class refresh_timeoverview_cache_test extends \externallib_advanced_testcase {
      * @throws \dml_exception
      * @throws \coding_exception
      */
-    public function test_task_execute_fail() {
+    public function test_task_execute_fail(): void {
         set_config('course_list', "0," . $this->course->id . ",666", 'local_lytix');
         $task = new refresh_timeoverview_cache();
         self::assertFalse($task->execute(), "task should fail, but did not.");

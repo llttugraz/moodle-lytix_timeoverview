@@ -84,7 +84,7 @@ class timeoverview_lib extends \external_api {
     public static function timeoverview_get($contextid, $courseid) {
         $params = self::validate_parameters(self::timeoverview_get_parameters(), [
                 'contextid' => $contextid,
-                'courseid'  => $courseid
+                'courseid'  => $courseid,
         ]);
 
         // We always must call validate_context in a webservice.

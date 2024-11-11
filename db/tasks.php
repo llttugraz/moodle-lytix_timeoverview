@@ -25,17 +25,17 @@
  */
 
 defined('MOODLE_INTERNAL') || die();
-$tasks = array(
+$tasks = [
     // Cronjob to store the click events into the DB.
-    array(
+    [
         'classname' => 'lytix_timeoverview\task\refresh_timeoverview_cache',
         'blocking' => 0,
         'minute' => '0',
         'hour' => '4',
         'day' => '*',
         'dayofweek' => '*',
-        'month' => '*'
-    ),
+        'month' => '*',
+    ],
 
     // NOTE add tasks as needed.
-);
+];

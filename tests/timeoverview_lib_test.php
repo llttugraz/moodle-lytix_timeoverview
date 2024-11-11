@@ -40,7 +40,7 @@ use lytix_helper\dummy;
  * @runTestsInSeparateProcesses
  * @coversDefaultClass  \lytix_timeoverview\timeoverview_lib
  */
-class timeoverview_lib_test extends externallib_advanced_testcase {
+final class timeoverview_lib_test extends externallib_advanced_testcase {
     /**
      * Variable for course.
      *
@@ -66,6 +66,7 @@ class timeoverview_lib_test extends externallib_advanced_testcase {
      * Setup called before any test case.
      */
     public function setUp(): void {
+        parent::setUp();
         $this->resetAfterTest(true);
         $this->setAdminUser();
         global $CFG;
@@ -103,7 +104,7 @@ class timeoverview_lib_test extends externallib_advanced_testcase {
      * @throws \invalid_parameter_exception
      * @throws \restricted_context_exception
      */
-    public function test_empty_timeoverview() {
+    public function test_empty_timeoverview(): void {
         $return = timeoverview_lib::timeoverview_get($this->context->id, $this->course->id);
         try {
             external_api::clean_returnvalue(timeoverview_lib::timeoverview_get_returns(), $return);
@@ -133,7 +134,7 @@ class timeoverview_lib_test extends externallib_advanced_testcase {
      * @throws \invalid_response_exception
      * @throws \restricted_context_exception
      */
-    public function test_timeoverview_activities() {
+    public function test_timeoverview_activities(): void {
         $date = new \DateTime('4 months ago');
         date_add($date, date_interval_create_from_date_string('6 hours'));
         $today = new \DateTime('today midnight');

@@ -23,29 +23,21 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Lytix Timeoverview';
-
-$string['privacy:metadata'] = 'This plugin does not store any data.';
-
-$string['cachedef_timeoverview'] = 'Cache for lytix_timeoverview.';
-$string['cron_refresh_lytix_timeoverview_cache'] = 'Refresh cache for lytix_timeoverview.';
-
-// Activity, Time Division.
-$string['overview_activities'] = 'Time Overview';
-
-$string['desc'] = 'Analysis of time spent in course since the start of the course, aggregated. Values below one percent are not shown.';
-$string['forum'] = 'Forum';
-$string['quiz'] = 'Quiz';
-$string['video'] = 'Video';
-$string['course'] = 'Course';
 $string['bbb'] = 'BigBlueButton';
-$string['grade'] = 'Grade';
-$string['submission'] = 'Assignments';
-$string['resource'] = 'Resources';
-$string['feedback'] = 'Feedback';
-
-$string['time'] = 'Time';
+$string['cachedef_timeoverview'] = 'Cache for lytix_timeoverview.';
 $string['clicks'] = 'Clicks';
-
-// Privacy.
+$string['course'] = 'Course';
+$string['cron_refresh_lytix_timeoverview_cache'] = 'Refresh cache for lytix_timeoverview.';
+$string['desc'] = 'Analysis of time spent in course since the start of the course, aggregated. Values below one percent are not shown.';
+$string['feedback'] = 'Feedback';
+$string['forum'] = 'Forum';
+$string['grade'] = 'Grade';
+$string['overview_activities'] = 'Time Overview';
+$string['pluginname'] = 'Lytix Timeoverview';
+$string['privacy:metadata'] = 'This plugin does not store any data.';
 $string['privacy:nullproviderreason'] = 'This plugin has no database to store user information. It only uses APIs in mod_assign to help with displaying the grading interface.';
+$string['quiz'] = 'Quiz';
+$string['resource'] = 'Resources';
+$string['submission'] = 'Assignments';
+$string['time'] = 'Time';
+$string['video'] = 'Video';
