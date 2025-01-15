@@ -26,7 +26,7 @@
 $string['bbb'] = 'BigBlueButton';
 $string['clicks'] = 'Klicks';
 $string['course'] = 'im Kurs';
-$string['desc'] = 'Analyse der gesamten Kurszeit seit Kursstart, aggregiert. Werte unter einem Prozent werden nicht angeführt.';
+$string['desc'] = 'Analyse der gesamten Kurszeit, aggregiert. Werte unter einem Prozent werden nicht angeführt.';
 $string['feedback'] = 'Feedback';
 $string['forum'] = 'Forum';
 $string['grade'] = 'Noten';
