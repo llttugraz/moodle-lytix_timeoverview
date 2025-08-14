@@ -15,12 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Timeoverview plugin for lytix
+ * Language file en.
  *
- * @package    lytix_timeoverview
- * @author     Viktoria Wieser
- * @copyright  2021 Educational Technologies, Graz, University of Technology
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package lytix_timeoverview
+ * @author Moodle plugin: Language strings translator (local_translatelangstr) - automatically generated file
+ * @copyright 2025 Educational Technologies, Graz, University of Technology
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $string['bbb'] = 'BigBlueButton';
@@ -31,7 +31,7 @@ $string['cron_refresh_lytix_timeoverview_cache'] = 'Refresh cache for lytix_time
 $string['desc'] = 'Analysis of time spent in course, aggregated. Values below one percent are not shown.';
 $string['feedback'] = 'Feedback';
 $string['forum'] = 'Forum';
-$string['grade'] = 'Grade';
+$string['grade'] = 'Grades';
 $string['overview_activities'] = 'Time Overview';
 $string['pluginname'] = 'Lytix Timeoverview';
 $string['privacy:metadata'] = 'This plugin does not store any data.';

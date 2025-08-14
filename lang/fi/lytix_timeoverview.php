@@ -15,31 +15,29 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * FI localisation
+ * Language file fi.
  *
- * @package    lytix_timeoverview
- * @author     Behnam Taraghi <b.taraghi@tugraz.at>
- * @copyright  2019 Educational Technologies, Graz, University of Technology
- * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package lytix_timeoverview
+ * @author Moodle plugin: Language strings translator (local_translatelangstr) - automatically generated file
+ * @copyright 2025 Educational Technologies, Graz, University of Technology
+ * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
-
 $string['bbb'] = 'BigBlueButton';
-$string['cachedef_timeoverview'] = 'Välimuisti lytix_timeoverview.';
+$string['cachedef_timeoverview'] = 'Välimuisti lytix_timeoverview-tiedostolle.';
 $string['clicks'] = 'Klikkaukset';
 $string['course'] = 'Kurssi';
-$string['cron_refresh_lytix_timeoverview_cache'] = 'Päivitä välimuisti lytix_timeoverview.';
-$string['desc'] = 'Analyysi kursseihin käytetystä ajasta kurssin aloittamisesta lähtien, kooste. Alle yhden prosentin arvoja ei näytetä.';
+$string['cron_refresh_lytix_timeoverview_cache'] = 'Tyhjennä välimuisti lytix_timeoverview-sivulle.';
+$string['desc'] = 'Kurssilla vietetty aika, yhteenlaskettu. Alle yhden prosentin arvot eivät näy.';
 $string['feedback'] = 'Palaute';
-$string['forum'] = 'Keskustelualue';
-$string['grade'] = 'Arvosana';
-$string['overview_activities'] = 'Ajan yleiskatsaus';
-$string['pluginname'] = 'Lytix: ajan yleiskatsaus';
-$string['privacy:metadata'] = 'Tämä lisäosa ei tallenna mitään henkilötietoja.';
-$string['privacy:nullproviderreason'] = 'Tällä lisäosalla ei ole tietokantaa käyttäjätietojen tallentamiseen. Se käyttää ainoastaan API-rajapintoja mod_assign jaotellun käyttöliittymän esittämiseen';
-$string['quiz'] = 'Tentti';
-$string['resource'] = 'Aineistot';
+$string['forum'] = 'Foorumi';
+$string['grade'] = 'Arvosanat';
+$string['overview_activities'] = 'Aikakatsaus';
+$string['pluginname'] = 'Lytix Aikakatsaus';
+$string['privacy:metadata'] = 'Tämä laajennus ei tallenna mitään tietoja.';
+$string['privacy:nullproviderreason'] = 'Tällä laajennuksella ei ole tietokantaa käyttäjätietojen tallentamista varten. Se käyttää vain mod_assign-moduulin API-rajapintoja arviointirajapinnan näyttämiseen.';
+$string['quiz'] = 'Kokeet';
+$string['resource'] = 'Resurssit';
 $string['submission'] = 'Tehtävät';
 $string['time'] = 'Aika';
 $string['video'] = 'Video';

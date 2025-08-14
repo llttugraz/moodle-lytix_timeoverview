@@ -1,3 +1,9 @@
+### v1.1.8 - 14.08.2025
+- New/updated translation strings
+
+### v1.1.7 - 15.01.2025
+- Improved help texts
+
 ### v1.1.6 - 25.10.2024
 - Update for compatibility with Moodle 4.5
 - Fix dependencies in `version.php` and `composer.json`
