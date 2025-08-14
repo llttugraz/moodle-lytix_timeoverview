@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Language file it.
+ * Language file es.
  *
  * @package lytix_timeoverview
  * @author Moodle plugin: Language strings translator (local_translatelangstr) - automatically generated file
@@ -24,20 +24,20 @@
  */
 
 $string['bbb'] = 'BigBlueButton';
-$string['cachedef_timeoverview'] = 'Cache per lytix_timeoverview.';
-$string['clicks'] = 'Clic';
-$string['course'] = 'Corso';
-$string['cron_refresh_lytix_timeoverview_cache'] = 'Aggiorna la cache per lytix_timeoverview.';
-$string['desc'] = 'Analisi del tempo trascorso nel corso, aggregato. I valori inferiori all\'uno per cento non sono visualizzati.';
+$string['cachedef_timeoverview'] = 'Caché para lytix_timeoverview.';
+$string['clicks'] = 'Clics';
+$string['course'] = 'Curso';
+$string['cron_refresh_lytix_timeoverview_cache'] = 'Actualice la caché para lytix_timeoverview.';
+$string['desc'] = 'Análisis del tiempo dedicado al curso, agregado. No se muestran los valores inferiores al uno por ciento.';
 $string['feedback'] = 'Feedback';
-$string['forum'] = 'Forum';
-$string['grade'] = 'Valutazioni';
-$string['overview_activities'] = 'Panoramica del tempo';
-$string['pluginname'] = 'Panoramica temporale di Lytix';
-$string['privacy:metadata'] = 'Questo plugin non memorizza alcun dato.';
-$string['privacy:nullproviderreason'] = 'Questo plugin non dispone di un database per memorizzare le informazioni degli utenti. Utilizza solo le API in mod_assign per facilitare la visualizzazione dell\'interfaccia di valutazione.';
-$string['quiz'] = 'Quiz';
-$string['resource'] = 'Risorse';
-$string['submission'] = 'Compiti';
-$string['time'] = 'Tempo';
-$string['video'] = 'Video';
+$string['forum'] = 'Foro';
+$string['grade'] = 'Valutaciónes';
+$string['overview_activities'] = 'Resumen del tiempo';
+$string['pluginname'] = 'Resumen temporal de Lytix';
+$string['privacy:metadata'] = 'Este plugin no almacena ningún dato.';
+$string['privacy:nullproviderreason'] = 'Este complemento no tiene ninguna base de datos para almacenar la información de los usuarios. Solo utiliza las API de mod_assign para ayudar a mostrar la interfaz de calificación.';
+$string['quiz'] = 'Test';
+$string['resource'] = 'Recursos';
+$string['submission'] = 'Tareas';
+$string['time'] = 'Tiempo';
+$string['video'] = 'Vídeo';
